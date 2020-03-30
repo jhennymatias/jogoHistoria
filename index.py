@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*- 
 import sys
 from unicodedata import normalize
+from PIL import Image 
 
 def procura_resposta(number):
     number = str(number)
@@ -8,7 +9,8 @@ def procura_resposta(number):
         for line in file:
             if number in line:
                 txt = line.split(number)
-                return txt[1]
+                aux = txt[1].split('\n')
+                return aux[0]
 
 def remover_acentos(txt):
     aux = normalize('NFKD', txt).encode('ASCII', 'ignore').decode('ASCII')   
@@ -35,7 +37,7 @@ def primeira():
     print("Leonardo da Vinci")
     resposta1 = input("Já consegui chegar na primeira resposta? ")
     valida = procura_resposta(1)
-    if(remover_acentos(resposta1) in valida):
+    if(remover_acentos(resposta1) == valida):
         segunda()
     else:
         print("Resposta errada!")
@@ -55,7 +57,7 @@ def segunda():
     resposta2 = input("A resposta que deve me entreguer é qual o país que essa obra \n foi feita: ")
     valida = procura_resposta(2)
     
-    if(remover_acentos(resposta2) in valida):
+    if(remover_acentos(resposta2) == valida):
         terceira()
     else:
         print("Resposta errada!")
@@ -82,18 +84,42 @@ def terceira():
         * 月亮
         * doodmaak minotaur
         
-        A primeira letra irá te ajudar a acha a próxima resposta
+        A primeira letra irá te ajudar a achar a próxima resposta
     '''
     print(texto)
     resposta3 = input("Já chegou na sua resposta? ")
     valida = procura_resposta(3)
     
-    if(remover_acentos(resposta3) in valida):
-        print("resposta correta")
+    if(remover_acentos(resposta3) == valida):
+        quarta()
     else:
         print("Resposta errada!")
         sys.exit(0)
 
+def quarta():
+    texto = '''
+        THIS IS SPARTA
+        
+        Espero que você tenha entendido, você sabe onde isso aconteceu?
+        Sabia que há um memorial lá?  Vá até lá.
+        Já chegou?
+        
+        Agora eu preciso que você ande mais um pouquinho, precisamente: 1.197km
+        A imagem é uma dica não se assuste ;)
+    '''
+    print(texto)
+    im = Image.open(r"fase4.png")
+    im.show()
+    
+    resposta4 = input("Já chegou? ")
+    valida = procura_resposta(4)
+    
+    if(remover_acentos(resposta4) == valida):
+        print("resposta correta")
+    else:
+        print("Resposta errada!")
+        sys.exit(0)
+ 
 if __name__ == '__main__':
     main()
     
