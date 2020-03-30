@@ -115,7 +115,7 @@ def quarta():
     valida = procura_resposta(4)
     
     if(remover_acentos(resposta4) == valida):
-        print("resposta correta")
+        print("O desafio ainda não terminou! Continua")
     else:
         print("Resposta errada!")
         sys.exit(0)
