@@ -32,7 +32,7 @@ def main():
         sys.exit(0)
         
 def primeira():
-    print("\nResolva 3x = 42 + 1461 + x ")
+    print("\nResolva 3x = 42 + 1461 + 2x ")
     print(" + ")
     print("Leonardo da Vinci")
     resposta1 = input("Já consegui chegar na primeira resposta? ")
@@ -44,16 +44,17 @@ def primeira():
         sys.exit(0)
 
 def segunda():
-    print("\n Você sabe onde está esse quadro(1) atualmente?")
-    
+    print("\nVocê sabe onde está a monalisa atualmente?")
+    print("As letras abaixo formam o nome de um artista, que tem uma obra no mesmo lugar")
     print('''
-          x         n       a       a       t       e
-            d   r       d       i       o       i
-          l         a       e       u       i       n
-          o                     q          e       a
+          ______________________________________________
+          |    x      n      a       a       t       e  |
+          |  d   r       d       i       o       i      |
+          | l        a       e       u       i       n  |
+          |      o               q          e       a   |
+          |_____________________________________________|
           ''')
-    
-    print("Use o nome acima e descubra outra a obra que está no mesmo lugar.")
+    print("Sabe qual é a obra? ")
     resposta2 = input("A resposta que deve me entreguer é qual o país que essa obra \n foi feita: ")
     valida = procura_resposta(2)
     
@@ -77,11 +78,11 @@ def terceira():
         Hoje então deveremos encontrar eles e aqui vão as dicas:
                 
         * Wald
-        * 海
+        * hav
         * nani
         * maitasun
         * saĝo
-        * 月亮
+        * Ay
         * doodmaak minotaur
         
         A primeira letra irá te ajudar a achar a próxima resposta
@@ -104,7 +105,9 @@ def quarta():
         Sabia que há um memorial lá?  Vá até lá.
         Já chegou?
         
-        Agora eu preciso que você ande mais um pouquinho, precisamente: 1.197km
+        Latitude: 41°53′30″ ?
+        Longitude: 12°30′40″ ?
+        
         A imagem é uma dica não se assuste ;)
     '''
     print(texto)
@@ -119,6 +122,14 @@ def quarta():
     else:
         print("Resposta errada!")
         sys.exit(0)
+
+def quinta():
+    texto = '''
+        Olha chegamos em Roma e temos muitos lugares pra visitar,
+        assim aqui vai a dica de lugares que você deve ir:
+        
+        1 - 
+    '''
  
 if __name__ == '__main__':
     main()
