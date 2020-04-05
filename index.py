@@ -118,7 +118,7 @@ def quarta():
     valida = procura_resposta(4)
     
     if(remover_acentos(resposta4) == valida):
-        print("O desafio ainda não terminou! Continua")
+        quinta()
     else:
         print("Resposta errada!")
         sys.exit(0)
@@ -128,9 +128,50 @@ def quinta():
         Olha chegamos em Roma e temos muitos lugares pra visitar,
         assim aqui vai a dica de lugares que você deve ir:
         
-        1 - 
+        1 - É uma das principais estradas da antiga Roma. Recebeu 
+        este nome em memória do político romano Ápio Cláudio Cego.
+        
+        2 - Foi encomendado pelo Senado Romano para comemorar os dez 
+        anos do reinado de Constantino.
+        
+        3 - Ele foi construído pelo imperador Domiciano Logo depois
+        da morte de seu irmão mais velho, Tito.
+        
+        4 - Foram encomendadas por Maximiano em honra ao co-imperador 
+        Diocleciano, no ano que ele retornou da África.
+        
+        5- Devido às suas origens obscuras, era considerada pelos Romanos 
+        como um posto de mau presságio.
+        
+        6- Conhecido também por Amphitheatrum Flavium
+        
+        7- Localizada abaixo da Basílica de São Pedro
+
+        8- 41° 53′ 6.36″ N, 12° 28′ 49.44″ E (inglês) 
+        
+        USE A PRIMEIRA LETRA DE CADA RESPOSTA E ENCONTRA A PRÓXIMA CHAVE.
     '''
- 
+    print(texto)
+    resposta5 = input("Já chegou na sua resposta? ")
+    valida = procura_resposta(5)
+    if(remover_acentos(resposta5) == valida):
+        sexto()
+    else:
+        print("Resposta errada!")
+        sys.exit(0)
+        
+def sexto():
+    im = Image.open(r"fase6.jpg")
+    im.show()
+    resposta6 = input("Já chegou na sua resposta? ")
+    valida = procura_resposta(6)
+    if(remover_acentos(resposta6) == valida):
+        print("Continua ...")
+    else:
+        print("Resposta errada!")
+        sys.exit(0)
+        
+        
 if __name__ == '__main__':
     main()
     
